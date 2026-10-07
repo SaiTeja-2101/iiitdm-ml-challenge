@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.kaggle/
+.downloads/
+*.py[cod]
+train.csv
+test.csv
+sample_submission.csv
+ml-challenge-cs-club.zip
+models/

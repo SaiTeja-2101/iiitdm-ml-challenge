@@ -1,0 +1,209 @@
+{
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "catboost": "not-installed",
+    "lightgbm": "4.6.0"
+  },
+  "seed": 42,
+  "mode": "full",
+  "train_shape": [
+    37144,
+    61
+  ],
+  "test_shape": [
+    2500,
+    60
+  ],
+  "clean_train_rows": 21365,
+  "class_counts": {
+    "A": 1715,
+    "B": 3945,
+    "C": 7230,
+    "D": 13507,
+    "E": 10747
+  },
+  "candidate_results": [
+    {
+      "name": "lightgbm_balanced",
+      "mean_macro_f1": 0.31397949982523443,
+      "std_macro_f1": 0.006463754011511886,
+      "selection_score": 0.3107476228194785,
+      "fold_macro_f1": [
+        0.3069545111925452,
+        0.3207689162481488,
+        0.31632985751674436,
+        0.3201916875006843,
+        0.3056525266680496
+      ],
+      "per_class_f1": {
+        "A": 0.128,
+        "B": 0.18784266984505363,
+        "C": 0.30108321024126045,
+        "D": 0.42006563525550866,
+        "E": 0.5328040418621436
+      },
+      "confusion_matrix": [
+        [
+          104,
+          199,
+          239,
+          279,
+          189
+        ],
+        [
+          127,
+          394,
+          662,
+          645,
+          463
+        ],
+        [
+          129,
+          466,
+          1223,
+          1423,
+          826
+        ],
+        [
+          151,
+          577,
+          1447,
+          3136,
+          2438
+        ],
+        [
+          104,
+          268,
+          486,
+          1699,
+          3691
+        ]
+      ],
+      "fit_seconds": 439.6184105873108
+    }
+  ],
+  "constant_d_macro_f1": 0.10646424400631997,
+  "selection": {
+    "base_choice": "lightgbm_balanced",
+    "base_selection_score": 0.3107476228194785,
+    "bias_adjustment": {
+      "accepted": true,
+      "base_macro_f1": 0.31395911144079325,
+      "crossfit_macro_f1": 0.3213177502599588,
+      "fold_deltas": [
+        0.008835039641358178,
+        0.0019558871214967466,
+        0.009998410490034249,
+        0.008549529418377166,
+        0.007011003398763704
+      ],
+      "final_biases": [
+        0.700000000000002,
+        0.2000000000000015,
+        0.0,
+        0.0,
+        -0.09999999999999876
+      ],
+      "crossfit_per_class_f1": {
+        "A": 0.1819560272934041,
+        "B": 0.19551210842035102,
+        "C": 0.29312901631240734,
+        "D": 0.411946446961895,
+        "E": 0.5240451523117365
+      },
+      "crossfit_confusion_matrix": [
+        [
+          240,
+          183,
+          215,
+          228,
+          144
+        ],
+        [
+          286,
+          440,
+          625,
+          550,
+          390
+        ],
+        [
+          333,
+          550,
+          1186,
+          1333,
+          665
+        ],
+        [
+          467,
+          701,
+          1483,
+          3000,
+          2098
+        ],
+        [
+          302,
+          336,
+          516,
+          1705,
+          3389
+        ]
+      ]
+    }
+  },
+  "selected_model": "lightgbm_balanced+bias",
+  "submission_sha256": "b34b46fc46535af5f0ebc64edc62309f91d37b70491094e2aff19158e5c4bcc7",
+  "submission_class_counts": {
+    "A": 246,
+    "B": 389,
+    "C": 464,
+    "D": 767,
+    "E": 634
+  },
+  "submission_head": [
+    {
+      "id": 9516,
+      "target_popularity": "D"
+    },
+    {
+      "id": 35906,
+      "target_popularity": "B"
+    },
+    {
+      "id": 20105,
+      "target_popularity": "D"
+    },
+    {
+      "id": 35214,
+      "target_popularity": "E"
+    },
+    {
+      "id": 3184,
+      "target_popularity": "A"
+    }
+  ],
+  "submission_tail": [
+    {
+      "id": 34969,
+      "target_popularity": "A"
+    },
+    {
+      "id": 13663,
+      "target_popularity": "A"
+    },
+    {
+      "id": 10281,
+      "target_popularity": "B"
+    },
+    {
+      "id": 8069,
+      "target_popularity": "A"
+    },
+    {
+      "id": 23923,
+      "target_popularity": "D"
+    }
+  ]
+}
